@@ -1,0 +1,22 @@
+main {
+    background: var(--Sec);
+    height: 100%;
+    width: 80%;
+}
+
+header.Left nav ul li h1 {
+    display: flex;
+    align-items: center;
+}
+header.Left nav ul li h1 ion-icon {
+    margin-right: 20px;
+}
+
+header.Left nav ul li {
+    margin-top: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+header.Left nav ul li:hover {
+    background: var(--OptionHover);
+}

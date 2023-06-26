@@ -1,3 +1,21 @@
+:root {
+    --Pri: #0079FF;
+    --Sec: #00DFA2;
+    --Ter: #F6FA70;
+    --Qua: #FF0060;
+
+    --Texto: white;
+
+    --OptionHover: rgba(255, 255, 255, 0.452);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--Texto);
+}
+
 .Palheta0 {
     --Pri: #243763;
     --Sec: #FF6E31;
@@ -16,7 +34,6 @@
     --Ter: #FCFFB2;
     --Qua: #B6EAFA;
 }
-
 .Palheta3 {
     --Pri: #0079FF;
     --Sec: #00DFA2;

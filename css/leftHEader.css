@@ -1,0 +1,17 @@
+header.Top {
+    height: 50px;
+    background: var(--Pri);
+}
+
+.Conteudo {
+    display: flex;
+    height: calc(100% - 50px);
+    width: 100%;
+}
+
+header.Left {
+    height: 100%;
+    width: 20%;
+    background: var(--Pri);
+    padding: 5px;
+}
