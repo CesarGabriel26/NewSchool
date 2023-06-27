@@ -11,10 +11,11 @@ const Card = (Materia) => `
 
 var Dados = {
     Materias: [
-        "Matematica",
-        "Ciência",
-        "Geografia"
+        ["Matematica", ["All"] ],
+        ["Ciência", ["All"] ],
+        ["Geografia", ["All"] ]
     ],
+    
     Classes: [
         "Pré escola",
         "1º Ano",
@@ -33,10 +34,19 @@ var Dados = {
 }
 
 function GetMaterias(Classe) {
-    var html = `<h1>Matematica</h1>`
+    var html = ""
 
-    Dados.Materias.forEach(Materia =>{
-        
+
+    Dados.Materias.forEach(Materia => {
+        var Array = Materia[1]
+
+        if (Array[0] == "All") {
+            html += `<a href="#${Materia[0]}"><h1>${Materia[0]}</h1></a>`
+        }else {
+            if (Classe == Array[0]) {
+                html += `<a href="#${Materia[0]}"><h1>${Materia[0]}</h1></a>`
+            }
+        }
     })
 
     return html
@@ -44,19 +54,19 @@ function GetMaterias(Classe) {
 
 
 function CarregarClasses() {
-    
 
-    var html = (Classe) =>`
-        <div class="OpcContainer">
+
+    var html = (Classe) => `
+        <div onmouseleave="HideMaterias()" onmouseenter="LoadPage('${Classe}');ShowMaterias('${Classe}')" class="OpcContainer">
         
-            <li onclick="LoadPage('${Classe}');ShowMaterias('${Classe}')" data-Page="${Classe}" id="Opc">
+            <li  data-Page="${Classe}" id="Opc">
                 <h1>
                     <ion-icon name="school-outline"></ion-icon>
                     ${Classe}
                 </h1>
             </li>
             <div id="Materias">
-                    ${GetMaterias()}
+                    ${GetMaterias(Classe)}
             </div>
         
         </div>
@@ -75,24 +85,29 @@ function LoadPage(Page) {
     Opcs.forEach(Opc => {
         if (Opc.getAttribute('data-Page') == Page) {
             Opc.classList.add('Select')
-        }else{
+        } else {
             Opc.classList.remove('Select')
+            Opc.parentElement.classList.remove('Aberto')
         }
     })
 }
 
-function ShowMaterias(Classe){
+function ShowMaterias(Classe) {
     let Opcs = document.querySelectorAll('#Opc')
 
     Opcs.forEach(Opc => {
         if (Opc.getAttribute('data-Page') == Classe) {
-            if (Opc.parentElement.classList.contains('Aberto')) {
-                Opc.parentElement.classList.remove('Aberto')
-            }else {
-                Opc.parentElement.classList.add('Aberto')
-            }
-        }else{
+            Opc.parentElement.classList.add('Aberto')
+        } else {
             Opc.parentElement.classList.remove('Aberto')
         }
+    })
+}
+
+function HideMaterias() {
+    let Opcs = document.querySelectorAll('#Opc')
+
+    Opcs.forEach(Opc => {
+        Opc.parentElement.classList.remove('Aberto')
     })
 }

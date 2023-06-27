@@ -3,15 +3,83 @@ header.Top {
     background: var(--Pri);
 }
 
-.Conteudo {
+header.Left nav ul li h1 {
     display: flex;
-    height: calc(100% - 50px);
-    width: 100%;
+    align-items: center;
 }
+
+header.Left nav ul li h1 {
+    transition: .5s ease-in-out;
+}
+
+header.Left nav ul li h1 svg,
+header.Left nav ul li h1 ion-icon {
+    margin-right: 20px;
+    fill: var(--Texto);
+    transition: .5s ease-in-out;
+}
+
+header.Left nav ul li {
+    margin-top: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+header.Left nav ul li:hover {
+    background: var(--OptionHover);
+}
+
+header.Left nav ul li.Select {
+    background: var(--OptionSelect);
+}
+
+header.Left nav ul li:hover h1 svg,
+header.Left nav ul li:hover h1 ion-icon,
+header.Left nav ul li:hover h1 {
+    color: var(--Preto);
+    fill: var(--Preto);
+}
+
+
 
 header.Left {
     height: 100%;
     width: 20%;
     background: var(--Pri);
     padding: 5px;
+}
+
+#Materias {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    right: -148px;
+    top: 10px;
+}
+
+#Materias a h1 {
+    margin-top: 10px;
+}
+
+.OpcContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#Materias a {text-decoration: none;}
+#Materias a:hover {text-decoration: underline;}
+#Materias {
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    overflow: hidden;
+    display: none;
+    background: var(--Pri);
+    padding: 10px;
+}
+.OpcContainer.Aberto #Materias {
+    height: fit-content;
+    display: flex;
 }
