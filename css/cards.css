@@ -1,0 +1,38 @@
+.Card {
+    background: var(--Ter);
+    width: fit-content;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    overflow: hidden;
+    transform: rotateZ(0);
+    transition: .2s ease-in-out;
+    min-width: 140px;
+    min-height: 120px;
+
+    margin: 20px;
+
+    user-select: none;
+}
+
+.Card:hover {
+    transform: rotateZ(-15deg);
+}
+
+.Card h2 {
+    font-size: 18px;
+}
+
+.Image {
+    background: var(--Qua);
+    width: 150px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

@@ -5,8 +5,10 @@
     --Qua: #FF0060;
 
     --Texto: white;
+    --Preto: black;
 
     --OptionHover: rgba(255, 255, 255, 0.452);
+    --OptionSelect: rgba(255, 217, 0, 0.452);
 }
 
 *{
@@ -18,13 +20,13 @@
 
 .Palheta0 {
     --Pri: #243763;
-    --Sec: #FF6E31;
-    --Ter: #FFEBB7;
-    --Qua: #AD8E70;
+    --Sec: #312c2a;
+    --Ter: #ffb700;
+    --Qua: #FF6E31;
 }
 .Palheta1 {
     --Pri: #3C486B;
-    --Sec: #F0F0F0;
+    --Sec: #d6d4d4;
     --Ter: #F9D949;
     --Qua: #F45050;
 }

@@ -8,15 +8,39 @@ header.Left nav ul li h1 {
     display: flex;
     align-items: center;
 }
+
+header.Left nav ul li h1{transition: .5s ease-in-out;}
+header.Left nav ul li h1 svg,
 header.Left nav ul li h1 ion-icon {
     margin-right: 20px;
+    fill: var(--Texto);
+    transition: .5s ease-in-out;
 }
 
 header.Left nav ul li {
     margin-top: 10px;
     padding: 5px;
     cursor: pointer;
+    transition: .5s ease-in-out;
 }
-header.Left nav ul li:hover {
-    background: var(--OptionHover);
+
+header.Left nav ul li:hover {background: var(--OptionHover);}
+header.Left nav ul li.Select {background: var(--OptionSelect);}
+
+header.Left nav ul li:hover h1 svg,
+header.Left nav ul li:hover h1 ion-icon,
+header.Left nav ul li:hover h1{
+    color: var(--Preto);
+    fill: var(--Preto);
+}
+
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
 }
