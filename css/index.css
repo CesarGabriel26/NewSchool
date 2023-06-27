@@ -44,3 +44,15 @@ header.Left nav ul li:hover h1{
     flex-wrap: wrap;
     overflow-y: scroll;
 }
+
+#Materias {
+    display: flex;
+    justify-content: center;
+}
+.OpcContainer {
+    height: 50px;
+    overflow: hidden;
+}
+.OpcContainer.Aberto {
+    height: fit-content;
+}
